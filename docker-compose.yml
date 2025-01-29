@@ -1,0 +1,12 @@
+services:
+  browser-use:
+    build: .
+    image: vovan/browser-use
+    container_name: browser-use
+    environment:
+      - OPENAI_API_KEY=${OPENAI_BROWSER_USE_KEY}
+      - BROWSER_USE_LOGGING_LEVEL=info
+    volumes:
+      - .:/app
+    ports:
+      - '5900:5900'
