@@ -5,7 +5,7 @@ services:
     container_name: browser-use
     environment:
       - OPENAI_API_KEY=${OPENAI_BROWSER_USE_KEY}
-      - BROWSER_USE_LOGGING_LEVEL=info
+      - BROWSER_USE_LOGGING_LEVEL=debug
     volumes:
       - .:/app
     ports:
