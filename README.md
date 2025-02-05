@@ -50,6 +50,16 @@ localhost:5900
 
 Password: `secret`
 
+## Connecting to Local Ollama
+
+If you're running Ollama on your host machine, add the `extra_hosts` configuration as shown above. This allows the container to connect to Ollama using `host.docker.internal:11434` as the host address.
+
+```
+    ...
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'    # Required for connecting to Ollama running on host machine
+```
+
 ## Stopping the Container
 
 To stop the running container:

@@ -10,3 +10,5 @@ services:
       - .:/app
     ports:
       - '5900:5900'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
