@@ -7,7 +7,7 @@ load_dotenv()
 
 async def main():
     agent = Agent(
-        task="Go to Reddit, search for 'browser-use', click on the first post and return the first comment.",
+        task="Go to kayak.com and find the instagram link",
         llm=ChatOpenAI(model="gpt-4o-mini"),
     )
     result = await agent.run()
